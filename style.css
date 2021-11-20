@@ -1,0 +1,207 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html { 
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+:root {
+    --clr-black: #2f2f2f;
+    --clr-white: #fff;
+    --clr-red: #f83038;
+}
+
+.main {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(#1c1c1c, #323232);
+    padding: 30px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main::before {
+    content: 'DUCATI';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 19vw;
+    font-weight: 700;
+    color: rgba(255,255,255,0.05);
+}
+
+.logo {
+    max-width: 80px;
+    opacity: 0.85;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar li a {
+    position: relative;
+    color: var(--clr-white);
+    margin-left: 40px;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.navbar li a:hover {
+    color: var(--clr-red);
+}
+
+.content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    /* z-index: 1;  */
+}
+
+.content h2 {
+    font-size: 5em;
+    font-weight: 300;
+    color: var(--clr-white);
+    text-align: center;
+    margin: 0;
+}
+
+.content h2 span {
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--clr-red);
+    color: var(--clr-white);
+    text-decoration: none;
+    padding: 16px 36px;
+    margin-top: 20px; 
+    border-radius: 50px;
+    font-size: 1.25em;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    letter-spacing: 4px;
+}
+
+.superbike {
+    max-width: 78%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sci {
+    display: flex;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    color: var(--clr-white);
+    font-size: 2em;
+    margin-right: 20px;
+    transition: 0.25s;
+}
+
+.sci li a:hover {
+    color: var(--clr-red);
+}
+
+.dots {
+    display: flex;
+    position: relative;
+}
+
+.dots .dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.dots .dot.active {
+    background: var(--clr-white);
+}
+
+.slider .slides {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 10;    
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    transition: 0.2s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.slider .slides.active {
+    opacity: 1;
+    top: 50%;
+}
+
+.slider .slides h2:last-child {
+    text-align: end;
+}
+
+.slider .slides h2 {
+    color: var(--clr-white);
+    font-size: 3em;
+}
+
+.slider .slides h2 span {
+    color: var(--clr-red);
+    font-size: 0.5em;
+    font-weight: 400;
+    font-style: italic;
+}
