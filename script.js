@@ -1,3 +1,14 @@
+/* Navbar */
+const toggle = document.querySelector('.toggle');
+const navbar = document.querySelector('.navbar');
+
+toggle.addEventListener('click', function() {
+    toggle.classList.toggle('active');
+    navbar.classList.toggle('active');
+})
+
+/* Slider */ 
+
 const slides = document.querySelectorAll('.slides');
 const dots = document.querySelectorAll('.dot');
 
