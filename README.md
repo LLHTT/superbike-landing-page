@@ -11,4 +11,4 @@ This is the source code for my superbike landing page. I built this to showcase 
 
 ## Demo
 
-You can visit the website by going [here](https://lawrence9z.github.io/superbike-landing-page/).
+You can visit the website by going [here](https://lawrence-le.github.io/superbike-landing-page/).
